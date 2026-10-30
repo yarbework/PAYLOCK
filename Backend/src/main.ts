@@ -11,7 +11,10 @@ async function bootstrap() {
 
   // Allow requests from the Vite frontend
   app.enableCors({
-    origin: 'http://localhost:5173',
+    origin:[
+      'http://localhost:5173',
+      'https://paylock-blond.vercel.app',
+      ],
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   });
